@@ -3,6 +3,8 @@ SublimeSimpleTODO
 
 Sublime Text 2 plugin to manage TODO.
 
+![screencast](https://raw.github.com/jugyo/SublimeSimpleTODO/master/screencast.gif)
+
 ## Installation
 
 ```
