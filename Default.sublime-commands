@@ -1,0 +1,12 @@
+[
+    {
+        "caption": "SimpleTODO: List TODO",
+        "command": "simple_todo",
+        "args": {"mode": "list"}
+    },
+    {
+        "caption": "SimpleTODO: Add TODO",
+        "command": "simple_todo",
+        "args": {"mode": "add"}
+    }
+]
