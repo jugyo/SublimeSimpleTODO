@@ -1,14 +1,14 @@
 SublimeSimpleTODO
 ========
 
-Sublime Text 2 plugin to manage TODO.
+Sublime Text plugin to manage TODO.
 
-![screencast](https://raw.github.com/jugyo/SublimeSimpleTODO/master/screencast.gif)
+![screencast](http://i.imgur.com/kAqIFLG.gif)
 
 ## Installation
 
 ```
-$ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
+$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
 $ git clone https://github.com/jugyo/SublimeSimpleTODO.git SimpleTODO
 ```
 
