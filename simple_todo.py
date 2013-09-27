@@ -63,7 +63,7 @@ class SimpleTodoCommand(sublime_plugin.TextCommand):
 
         info = "%s - %s:%s" % (item["text"], item["file_name"], int(item["line_number"]))
         items = [['< Back', ''], ['> Jump', info], ['- Delete', '']]
-        sublime.set_timeout(lambda: self.window.show_quick_panel(items, on_done), 10)
+        sublime.set_timeout(lambda: self.window.show_quick_panel(items, on_done), 0)
 
     def load_todo(self):
         settings = self.load_settings()
