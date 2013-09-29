@@ -14,17 +14,18 @@ class SimpleTodoListener(sublime_plugin.EventListener):
         self.refresh(view)
 
     def refresh(self, view):
-        settings = sublime.load_settings(SETTING_FILE_NAME)
-        directory = view.window().folders()[0]
-        todo = settings.get(directory)
-        if todo:
-            regions = []
-            for item in todo:
-                if view.file_name() == os.path.join(directory, item["file_name"]):
-                    point = view.text_point(int(item["line_number"]) - 1 ,0)
-                    regions.append(sublime.Region(point, point))
+        if view.window():
+            directory = view.window().folders()[0]
+            settings = sublime.load_settings(SETTING_FILE_NAME)
+            todo = settings.get(directory)
+            if todo:
+                regions = []
+                for item in todo:
+                    if view.file_name() == os.path.join(directory, item["file_name"]):
+                        point = view.text_point(int(item["line_number"]) - 1 ,0)
+                        regions.append(sublime.Region(point, point))
 
-            view.add_regions("SimpleTodo", regions, "mark", "dot", sublime.HIDDEN)
+                view.add_regions("SimpleTodo", regions, "mark", "dot", sublime.HIDDEN)
 
 class SimpleTodoCommand(sublime_plugin.TextCommand):
     def run(self, edit, mode):
