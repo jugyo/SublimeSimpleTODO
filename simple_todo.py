@@ -14,7 +14,7 @@ class SimpleTodoListener(sublime_plugin.EventListener):
         self.refresh(view)
 
     def refresh(self, view):
-        if view.window():
+        if view.window() and view.window().folders():
             directory = view.window().folders()[0]
             settings = sublime.load_settings(SETTING_FILE_NAME)
             todo = settings.get(directory)
